@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>QR code page </title>
+	<link rel="stylesheet" type="text/css" href="{% static "qrcodeapp/css/qrcreate.css" %}">
+</head>
+<body>
+<div class="container"align="center">
+	<form method="POST">
+		<h1>QR Code Form</h1>
+		<h2>Please provide the valid url</h2>
+			{{ qr_form.as_p }}
+			{% csrf_token %}
+			<input type="submit" value="Genrate QR">
+            <input type="submit" value="Download">
+	</form>
+</div>
+
+</body>
+</html>
